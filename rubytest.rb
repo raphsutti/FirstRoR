@@ -21,21 +21,63 @@
 # end
 # for_test()
 
-# Testing hashes
-def hash_test()
-  # inst_section = {
-  #   :cello    => 'string',
-  # }
-  # better syntax - key is a symbol
-  inst_section = {
-    cello:    'string',
-    clarinet: 'woodwind',
-    drum:     'percussion',
-    oboe:     'woodwind',
-    trumpet:  'brass',
-    violin:   'string'
-  }
-  puts inst_section
-  puts inst_section[:trumpet] # returns nil if doesnt exist
+# # Testing hashes
+# def hash_test()
+#   # inst_section = {
+#   #   :cello    => 'string',
+#   # }
+#   # better syntax - key is a symbol
+#   inst_section = {
+#     cello:    'string',
+#     clarinet: 'woodwind',
+#     drum:     'percussion',
+#     oboe:     'woodwind',
+#     trumpet:  'brass',
+#     violin:   'string'
+#   }
+#   puts inst_section
+#   puts inst_section[:trumpet] # returns nil if doesnt exist
+# end
+# hash_test()
+
+# # Testing regular expression
+# def reg_test(arg)
+#   if arg =~ /r(uby|ail+s)/
+#     puts 'ruby or rails found'
+#   else
+#     puts 'nothing found'
+#   end
+# end
+# reg_test('ruby')
+# reg_test('Rails')
+# reg_test('rubys')
+# reg_test('raillllls')
+
+# # Testing logics
+# def logic_test(count)
+#   # if count > 10
+#   #   puts "try again"
+#   # elsif count == 3
+#   #   puts "You lose"
+#   # else
+#   #   puts "Enter a number"
+#   # end
+
+#   puts "danger, Will Robinson" if count > 10
+#   puts "you lose" if count == 3
+# end
+# logic_test(11)
+# logic_test(3)
+
+# testing blocks and iterators
+def greet() 
+  animals = %w{ ant bee cat dog elk }
+  animals.each { |animal| puts "Hi #{animal}" }
 end
-hash_test()
+greet()
+
+def wrap &b
+  print "Santa says: "
+  3.times(&b)
+end
+wrap { print "Ho! " }
