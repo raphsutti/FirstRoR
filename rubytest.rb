@@ -69,15 +69,26 @@
 # logic_test(11)
 # logic_test(3)
 
-# testing blocks and iterators
-def greet() 
-  animals = %w{ ant bee cat dog elk }
-  animals.each { |animal| puts "Hi #{animal}" }
-end
-greet()
+# # testing blocks and iterators
+# def greet() 
+#   animals = %w{ ant bee cat dog elk }
+#   animals.each { |animal| puts "Hi #{animal}" }
+# end
+# greet()
 
-def wrap &b
-  print "Santa says: "
-  3.times(&b)
-end
-wrap { print "Ho! " }
+# def wrap &b
+#   print "Santa says: "
+#   3.times(&b)
+# end
+# wrap { print "Ho! " }
+
+# # Test exceptions
+# begin
+#   content = load_blog_data(file_name)
+# rescue BlogDataNotFound
+#   STDERR.puts "File #{file_name} not found"
+# rescue BlogDataFormatError
+#   STDERR.puts "Invalid blog data in #{file_name}"
+# rescue Exception => exc
+#   STDERR.puts "General error loading #{file_name}: #{exc.message}"
+# end
