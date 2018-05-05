@@ -50,4 +50,10 @@
 #   end
 # end
 
-
+# modules - namespace where names will not clash
+# can share functionality between classes
+module StoreHelper
+  def capitalize_words(string)
+  string.split(' ').map {|word| word.capitalize}.join(' ')
+  end
+end
